@@ -2718,8 +2718,14 @@
 	}
 	farmers = {
 		culture = mayan
+		religion = cruzob
+		size = 16525
+		militancy = 9
+	}
+	farmers = {
+		culture = mayan
 		religion = catholic
-		size = 36525
+		size = 20525
 		militancy = 9
 	}
 }
@@ -2769,7 +2775,12 @@
 	farmers = {
 		culture = mayan
 		religion = catholic
-		size = 17800
+		size = 10800
+	}
+	farmers = {
+		culture = mayan
+		religion = cruzob
+		size = 7000
 	}
 }
 
@@ -2802,7 +2813,7 @@
 	}
 	farmers = {
 		culture = mayan
-		religion = catholic
+		religion = cruzob
 		size = 3200
 	}
 }
@@ -2851,7 +2862,7 @@
 	}
 	farmers = {
 		culture = mayan
-		religion = catholic
+		religion = cruzob
 		size = 19740
 	}
 }
@@ -2880,25 +2891,25 @@
 	}
 	clergymen = {
 		culture = mayan
-		religion = animist
+		religion = cruzob
 		size = 150
 		militancy = 8
 	}
 	artisans = {
 		culture = mayan
-		religion = animist
+		religion = cruzob
 		size = 1000
 		militancy = 8
 	}
 	soldiers = {
 		culture = mayan
-		religion = animist
+		religion = cruzob
 		size = 850
 		militancy = 8
 	}
 	farmers = {
 		culture = mayan
-		religion = animist
+		religion = cruzob
 		size = 7000
 		militancy = 8
 	}

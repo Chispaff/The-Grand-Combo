@@ -1,7 +1,7 @@
 ## /common/countries/country.txt ##
 
-color = { 64 176 1 }
-graphical_culture = Generic
+color = { 169 3 3 }
+graphical_culture = SouthAmericanGC
 
 # Facción Radical / Radical Faction (No Organized Party)
 party = {
@@ -102,7 +102,7 @@ party = {
 party = {
 	name = "MEX_anarchist"
 	start_date = 1840.1.1
-	end_date = 9999.1.1
+	end_date = 2000.1.1
 
 	ideology = anarchist
 
