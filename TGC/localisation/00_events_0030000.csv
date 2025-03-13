@@ -292,6 +292,26 @@ EVTOPTB32555;We can’t risk war.;;;;;;;;;;;;;x
 EVTDESC32556;The state of Los Altos was the sixth state of the Federal Republic of Central America, and its declaration of independence represents a humiliation of our sovereignty and an affront to our territorial integrity. So long as that state exists our legitimacy is questionable - we must go to war!;;;;;;;;;;;;;x
 EVTNAME32556;The Independence of Los Altos;;;;;;;;;;;;;x
 EVTOPTA32556;We cannot allow them to flaunt their secession in our faces.;;;;;;;;;;;;;x
+EVTDESC32557;Despite their best efforts, the Mexican invasion has failed to topple our republic! The general of the invasion force is now prepared to withdraw if we let him. What should we do?;;;;;;;;;;;;;x 
+EVTNAME32557;Mexican Invasion Repelled!;;;;;;;;;;;;;x
+EVTOPTA32557;We shall let him withdraw.;;;;;;;;;;;;;x
+EVTOPTB32557;The war is not yet over!;;;;;;;;;;;;;x
+EVTDESC32558;Our armies and generals have begun to withdraw from Yucatan, in accordance to an agreement they made with the rebel government. Should we begin an unofficial ceasefire with the rebels, to avoid further losses?;;;;;;;;;;;;;x
+EVTNAME32558;Ceasefire with Yucatan?;;;;;;;;;;;;;x
+EVTOPTA32558;Yes, let us end the war for now. The army cannot withstand another loss like this.;;;;;;;;;;;;;x
+EVTOPTB32558;Never! Yucatan will return to the republic, ceasefire be damned!;;;;;;;;;;;;;x
+EVTDESC32559;The centralist government in Mexico City has agreed to an unofficial ceasefire and is now withdrawing all military forces from the peninsula. Our independence has been won and the dream of a federalist Mexico lives on.;;;;;;;;;;;;;x
+EVTNAME32559;Ceasefire with Mexico!;;;;;;;;;;;;;x
+EVTOPTA32559;Viva la República de Yucatán!;;;;;;;;;;;;;x
+EVTDESC32560;Santa Anna has sent Quintana Roo, who presided over the National Constituent Congress that drafted the Declaration of Independence, to negotiate with us. It will take time, but he promises to come to a satisfactory agreement with us.;;;;;;;;;;;;;x
+EVTNAME32560;The Centralist envoy;;;;;;;;;;;;;x
+EVTOPTA32560;Let us see what the centralists have to offer.;;;;;;;;;;;;;x
+EVTDESC32561;The Centralist envoy has come to an agreement with us! They are offering to keep us an exception to the centralist system, allowing us to mostly govern ourselves. Should we accept?;;;;;;;;;;;;;x
+EVTNAME32561;The Centralist offer.;;;;;;;;;;;;;x
+EVTOPTA32561;The gambit has succeeded, let us return to Mexico!;;;;;;;;;;;;;x
+EVTDESC32562;Quintana Roo has succeeded in the negotiations, peacefully returning Yucatan to us. However, not everyone in the congress is happy about the agreement. Only time will tell if the agreement holds.;;;;;;;;;;;;;x
+EVTNAME32562;The negotiations succeed!;;;;;;;;;;;;;x
+EVTOPTA32562;We welcome our siblings back into the union with open arms!;;;;;;;;;;;;;x
 EVTDESC33000;The theatrical troupe of the Duchy of Saxe-Meiningen has performed their repertory in Berlin to great acclaim. They will soon begin a series of tours to nations throughout Europe.;La troupe théâtrale du duché de Saxe-Meiningen, qui interprétait son répertoire à Berlin, a été acclamée. Elle entreprendra bientôt plusieurs tournées en Europe.;Die Theatertruppe der Grafschaft Sachsen-Meiningen hat ihr Repertoir in Berlin mit großem Erfolg aufgeführt. Schon bald wird sie durch mehrere europäischen Nationen touren.;;;;;;;;;;;x
 EVTNAME33000;Meininger Troupe Opens in Berlin;La troupe de Saxe-Meiningen à Berlin;Meininger Theatertruppe tritt in Berlin auf;;;;;;;;;;;x
 EVTOPTA33000;Amazing!;Etonnant !;Erstaunlich!;;;;;;;;;;;x

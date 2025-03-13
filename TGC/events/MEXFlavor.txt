@@ -999,6 +999,282 @@
 		}
 	}
 
+##War with Yucatan##
+
+	#Description: The Yucatan Republic
+		country_event = {
+
+			id = 44821
+			title = EVTNAME44821
+			desc = EVTDESC44821
+			picture = "mexico_soldiers"
+
+			trigger = {
+				tag = MEX
+				is_vassal = no
+				OR = {
+					has_country_flag = santa_anna_in_charge
+					has_country_modifier = fight_the_power
+				}
+				NOT = {
+					exists = YUC
+					year = 1848
+				}
+				any_owned_province = { is_core = YUC }
+				year = 1839
+			}
+
+			mean_time_to_happen = {
+				months = 72
+				modifier = {
+					factor = 0.8
+					exists = RGR
+				}
+				modifier = {
+					factor = 0.8
+					war = yes
+				}
+				modifier = {
+					factor = 0.6
+					war_with = TEX
+				}
+				modifier = {
+					factor = 0.9
+					war_exhaustion = 15
+				}
+				modifier = {
+					factor = 0.9
+					war_exhaustion = 25
+				}
+				modifier = {
+					factor = 0.9
+					war_exhaustion = 45
+				}
+				modifier = {
+					factor = 0.8
+					year = 1839
+				}
+				modifier = {
+					factor = 0.8
+					year = 1840
+				}
+				modifier = {
+					factor = 0.8
+					year = 1841
+				}
+				modifier = {
+					factor = 0.1
+					OR = {
+						NOT = { owns = 2165 }
+						NOT = { controls = 2165 }
+					}
+					OR = {
+						NOT = { owns = 2181 }
+						NOT = { controls = 2181 }
+					}
+				}
+				modifier = {
+					factor = 0.9
+					YUC = { any_core = { NOT = { controlled_by = THIS } } }
+				}
+			}
+
+			fire_only_once = yes
+
+			# Send Quintana Roo
+			option = {
+				name = EVTOPTA44821
+
+				prestige = -10
+				add_country_flag = {
+					name = yucatan_independence_first
+				}
+				any_owned = {
+					limit = { is_core = YUC }
+					secede_province = YUC
+				}
+				YUC = { any_pop = { militancy = -6 } }
+				any_pop = {
+					limit = { is_primary_culture = yes }
+					militancy = 2
+				}
+				
+				YUC = {country_event = 32560}
+
+				ai_chance = {
+					factor = 100
+				}
+			}
+		}
+	
+	#Description: Quintana Roo negotiates with Yucatan
+	country_event = {
+		id = 32560
+		title = EVTNAME32560
+		desc = EVTDESC32560
+		picture = "antonio_lopez_de_santa_ana"
+
+		is_triggered_only = yes
+		
+		# Yucatan starts negotiations
+		option = {
+			name = EVTOPTA32560
+
+			set_country_flag = quintana_roo_negotiations
+
+			ai_chance = { factor = 100 }
+		}
+	}
+
+	#Description: Negotiations succeed
+	country_event = {
+		id = 32561
+		title = EVTNAME32561
+		desc = EVTDESC32561
+		picture = "antonio_lopez_de_santa_ana"
+
+		trigger = {
+			tag = YUC
+			has_country_flag = quintana_roo_negotiations
+		}
+
+		mean_time_to_happen = {
+			months = 5
+		}
+
+		fire_only_once = yes
+
+		#Negotiations succeed
+		option = {
+			name = EVTOPTA32561
+
+			prestige = 10
+			clr_country_flag = quintana_roo_negotiations
+			MEX =  { country_event = 32562 }
+		}
+	}
+
+	#Mexico makes Yucatan a puppet bcuz of negotiations
+	country_event = {
+		id = 32562
+		title = EVTNAME 32562
+		desc = EVTDESC32562
+		picture = "antonio_lopez_de_santa_ana"
+
+		is_triggered_only = yes
+
+		#yay it worked
+		option = {
+			name = EVTOPTA32562
+
+			prestige = 10
+			add_country_flag = treaty_of_1841
+			create_vassal = YUC
+			any_owned = {
+					limit = { is_core = YUC }
+					secede_province = YUC
+				}
+		}
+	}
+
+	#Description: Yucatan invasion 1/?, failed first time 
+	country_event = {
+		id = 32557
+		title = EVTNAME32557
+		desc = EVTDESC32557
+		picture = "surrender_of_santanna"
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		trigger = {
+			tag = YUC
+			war_with = MEX
+			MEX = { has_country_flag = presidential_dictatorship_gov } 
+			NOT = { year = 1845 } #Prevent it from showing up way too late
+		}
+
+
+		# Have peace
+		option = {
+			name = EVTOPTA32557
+
+			MEX = { country_event = 32558 }
+
+			ai_chance = { factor = 100 }
+		}
+
+		# Continue the war
+		option = {
+			name = EVTOPTB32557
+
+			MEX = {
+				war_exhaustion = 20
+			}
+
+			ai_chance = { factor = 0 }
+		}
+	}
+
+	#Description: Yucatan Invasion 2/? Mexico gets to choose
+	country_event = {
+		id = 32558
+		title = EVTNAME32558
+		desc = EVTDESC32558
+		picture = "surrender_of_santanna"
+		major = yes
+
+		is_triggered_only = yes
+
+		# Accept a ceasefire
+		option = {
+			name = EVTOPTA32558
+
+			prestige = -10
+			end_war = YUC
+			YUC = { country_event = 32559 }
+			add_country_flag = {
+				name = yucatan_ceasefire_accepted
+			}
+			ai_chance = { factor = 90 }
+		}
+
+		# Continue the war
+		option = {
+			name = EVTOPTC32558
+
+			war_exhaustion = 40
+			badboy = 5
+			prestige = -20
+			ai_chance = { factor = 10 }
+		}
+	}
+
+	#Description: Yucatan Invasion 3/? ceasefire
+	country_event = {
+		id = 32559
+		title = EVTNAME32559
+		desc = EVTDESC32559
+		picture = "treaty_of_velasco"
+
+		is_triggered_only = yes
+
+		option = {
+			name = EVTOPTA32559
+
+			any_country = {
+				limit = {
+					alliance_with = MEX
+					war_with = YUC
+				}
+				end_war = YUC
+			}
+			prestige = 30
+		}
+	}
+
+
+
 ## Minors ##
 
 	## Rebellions ##
@@ -1147,138 +1423,6 @@
 					factor = 10
 					modifier = {
 						factor = 2
-						war = yes
-					}
-				}
-			}
-		}
-
-		#Description: The Yucatan Republic
-		country_event = {
-
-			id = 44821
-			title = EVTNAME44821
-			desc = EVTDESC44821
-			picture = "mexico_soldiers"
-
-			trigger = {
-				tag = MEX
-				is_vassal = no
-				OR = {
-					has_country_flag = santa_anna_in_charge
-					has_country_modifier = fight_the_power
-				}
-				NOT = {
-					exists = YUC
-					year = 1848
-				}
-				any_owned_province = { is_core = YUC }
-				year = 1838
-			}
-
-			mean_time_to_happen = {
-				months = 72
-				modifier = {
-					factor = 0.8
-					exists = RGR
-				}
-				modifier = {
-					factor = 0.8
-					war = yes
-				}
-				modifier = {
-					factor = 0.6
-					war_with = TEX
-				}
-				modifier = {
-					factor = 0.9
-					war_exhaustion = 15
-				}
-				modifier = {
-					factor = 0.9
-					war_exhaustion = 25
-				}
-				modifier = {
-					factor = 0.9
-					war_exhaustion = 45
-				}
-				modifier = {
-					factor = 0.8
-					year = 1839
-				}
-				modifier = {
-					factor = 0.8
-					year = 1840
-				}
-				modifier = {
-					factor = 0.8
-					year = 1841
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						NOT = { owns = 2165 }
-						NOT = { controls = 2165 }
-					}
-					OR = {
-						NOT = { owns = 2181 }
-						NOT = { controls = 2181 }
-					}
-				}
-				modifier = {
-					factor = 0.9
-					YUC = { any_core = { NOT = { controlled_by = THIS } } }
-				}
-			}
-
-			fire_only_once = yes
-
-			# Go to war
-			option = {
-				name = EVTOPTA44820
-
-				any_owned = {
-					limit = { is_core = YUC }
-					secede_province = YUC
-				}
-				YUC = { any_pop = { militancy = -6 } }
-				war = {
-					target = YUC
-					attacker_goal = { casus_belli = annex_core_country }
-				}
-
-				ai_chance = {
-					factor = 90
-					modifier = {
-						factor = 0.25
-						war = yes
-					}
-					modifier = {
-						factor = 0.5
-						num_of_revolts = 1
-					}
-				}
-			}
-
-			# Let it go
-			option = {
-				name = EVTOPTB44820
-
-				prestige = -10
-				any_owned = {
-					limit = { is_core = YUC }
-					secede_province = YUC
-				}
-				YUC = { any_pop = { militancy = -6 } }
-				any_pop = {
-					limit = { is_primary_culture = yes }
-					militancy = 2
-				}
-
-				ai_chance = {
-					factor = 10
-					modifier = {
-						factor = 1.5
 						war = yes
 					}
 				}
