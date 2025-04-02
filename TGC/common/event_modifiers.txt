@@ -2009,7 +2009,7 @@ witwatersrand_gold_rush = {
 
 	yucatan_contradictions = {
 		global_pop_consciousness_modifier = 0.02
-		icon = 8	
+		icon = 6
 	}
 ## NEN - New England ##
 

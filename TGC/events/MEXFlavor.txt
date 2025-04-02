@@ -1338,12 +1338,7 @@
 			tag = MEX
 			is_vassal = no
 			has_country_flag = treaty_of_1841
-			OR = {
-				has_country_flag = fight_the_power
-				has_country_fag = santa_anna_in_charge
-				has_country_flag = presidential_dictatorship_gov
-			}
-			NOT = has_country_modifier = yucatan_contradictions
+			NOT = { has_country_modifier = yucatan_contradictions }
 		}
 
 		mean_time_to_happen = {
