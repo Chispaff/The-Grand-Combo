@@ -999,7 +999,7 @@
 		}
 	}
 
-##War with Yucatan##
+## War with Yucatan##
 
 	#Description: The Yucatan Republic
 		country_event = {
@@ -1025,7 +1025,7 @@
 			}
 
 			mean_time_to_happen = {
-				months = 72
+				months = 60
 				modifier = {
 					factor = 0.8
 					exists = RGR
@@ -1270,12 +1270,12 @@
 		option = {
 			name = EVTOPTA32558
 
-			prestige = -20
+			prestige = -10
 			plurality = -5
 			end_war = YUC
 			YUC = { country_event = 32559 }
 			add_country_flag = {
-				name = yucatan_ceasefire_accepted
+				name = yucatan_ceasefire
 			}
 			ai_chance = { factor = 90 }
 		}
@@ -1314,7 +1314,11 @@
 			prestige = 30
 		}
 	}
+## Yucatan-Centralist balancing act ##
+
+	#Description: Centralist Mexico stab hit every year yucatan is puppet
 	
+
 ## Minors ##
 
 	## Rebellions ##
@@ -1343,7 +1347,7 @@
 			}
 
 			mean_time_to_happen = {
-				months = 60
+				months = 50
 				modifier = {
 					factor = 0.8
 					year = 1839
