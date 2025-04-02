@@ -15,7 +15,7 @@
 		}
 
 		mean_time_to_happen = {
-			months = 10
+			months = 8
 			modifier = {
 				factor = 1.5
 				war = no
@@ -1015,6 +1015,7 @@
 				OR = {
 					has_country_flag = santa_anna_in_charge
 					has_country_modifier = fight_the_power
+					has_country_flag = presidential_dictatorship_gov
 				}
 				NOT = {
 					exists = YUC
@@ -1098,7 +1099,12 @@
 					limit = { is_primary_culture = yes }
 					militancy = 2
 				}
-				
+				YUC = {
+					any_owned = {
+						limit = { is_core = MEX }
+						remove_core = MEX
+					}
+				}
 				YUC = {country_event = 32560}
 
 				ai_chance = {
@@ -1196,19 +1202,23 @@
 	#Mexico makes Yucatan a puppet bcuz of negotiations
 	country_event = {
 		id = 32562
-		title = EVTNAME 32562
+		title = EVTNAME32562
 		desc = EVTDESC32562
 		picture = "antonio_lopez_de_santa_ana"
 
 		is_triggered_only = yes
 
-		#yay it worked
+		#yucatan becomes puppet
 		option = {
 			name = EVTOPTA32562
 
 			prestige = 15
 			plurality = 5
 			add_country_flag = treaty_of_1841
+			add_country_modifier = {
+				name = yucatan_contradictions
+				duration = 365
+			}
 			create_vassal = YUC
 			any_owned = {
 					limit = { is_core = YUC }
@@ -1314,10 +1324,49 @@
 			prestige = 30
 		}
 	}
+
 ## Yucatan-Centralist balancing act ##
 
 	#Description: Centralist Mexico stab hit every year yucatan is puppet
-	
+	country_event = {
+		id = 32563
+		title = EVTNAME32563
+		desc = EVTDESC32563
+		picture = "antonio_lopez_de_santa_ana"
+
+		trigger = {
+			tag = MEX
+			is_vassal = no
+			has_country_flag = treaty_of_1841
+			OR = {
+				has_country_flag = fight_the_power
+				has_country_fag = santa_anna_in_charge
+				has_country_flag = presidential_dictatorship_gov
+			}
+			NOT = has_country_modifier = yucatan_contradictions
+		}
+
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		#Take the stab hit
+		option = {
+			name = EVTOPTA32563
+
+			plurality = -0.5
+			any_pop = {
+				ideology = {
+					value = conservative
+				}
+				consciousness = 0.3
+			}
+			add_country_modifier = {
+				name = yucatan_contradictions
+				duration = 365
+			}
+		}
+	}
 
 ## Minors ##
 

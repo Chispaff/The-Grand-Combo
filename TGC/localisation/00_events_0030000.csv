@@ -312,6 +312,9 @@ EVTOPTA32561;The gambit has succeeded, let us return to Mexico!;;;;;;;;;;;;;x
 EVTDESC32562;Quintana Roo has succeeded in the negotiations, peacefully returning Yucatan to us. However, not everyone in the congress is happy about the agreement. Only time will tell if the agreement holds.;;;;;;;;;;;;;x
 EVTNAME32562;The negotiations succeed!;;;;;;;;;;;;;x
 EVTOPTA32562;We welcome our siblings back into the union with open arms!;;;;;;;;;;;;;x
+EVTDESC32563;While coming to an agreement with the rebels in Yucatan allowed us to avoid any undue bloodshed on the battlefield, the Chamber is Deputies has been attempting to breach the agreement we came to with the rebels for some time now. This tension has now begun to impact our nation’s stability.;;;;;;;;;;;;;x
+EVTNAME32563;Discontent with our policy in Yucatan.;;;;;;;;;;;;;x
+EVTOPTA32563;Can everyone stop fighting?!;;;;;;;;;;;;;x
 EVTDESC33000;The theatrical troupe of the Duchy of Saxe-Meiningen has performed their repertory in Berlin to great acclaim. They will soon begin a series of tours to nations throughout Europe.;La troupe théâtrale du duché de Saxe-Meiningen, qui interprétait son répertoire à Berlin, a été acclamée. Elle entreprendra bientôt plusieurs tournées en Europe.;Die Theatertruppe der Grafschaft Sachsen-Meiningen hat ihr Repertoir in Berlin mit großem Erfolg aufgeführt. Schon bald wird sie durch mehrere europäischen Nationen touren.;;;;;;;;;;;x
 EVTNAME33000;Meininger Troupe Opens in Berlin;La troupe de Saxe-Meiningen à Berlin;Meininger Theatertruppe tritt in Berlin auf;;;;;;;;;;;x
 EVTOPTA33000;Amazing!;Etonnant !;Erstaunlich!;;;;;;;;;;;x

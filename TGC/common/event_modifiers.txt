@@ -2005,7 +2005,12 @@ witwatersrand_gold_rush = {
 		factory_throughput = 0.02
 		icon = 13
 	}
+## MEX - Mexico ##
 
+	yucatan_contradictions = {
+		global_pop_consciousness_modifier = 0.02
+		icon = 8	
+	}
 ## NEN - New England ##
 
 	miskatonic_campus = {
