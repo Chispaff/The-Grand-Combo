@@ -1363,6 +1363,116 @@
 		}
 	}
 
+	#Description: Mexico tries to annex Yucatan
+	country_event = {
+		id = 32564
+		title = EVTNAME32564
+		desc = EVTDESC32564
+		picture = "antonio_lopez_de_santa_ana"
+
+		is_triggered_only = yes
+
+		#Move to annex
+		option = {
+			name = EVTOPTA32564
+
+			plurality = -10
+			YUC = { country_event = 32565 }
+			add_country_flag = attempted_yucatan_annexation
+		}
+
+		#Back down
+		option = {
+			name = EVTOPTB32564
+		}
+	}
+
+	#Description: Yucatan is alerted to Mexico's plans 
+	country_event = {
+		id = 32565
+		title = EVTNAME32565
+		desc = EVTDESC32565
+		picture = "antonio_lopez_de_santa_ana"
+
+		is_triggered_only = yes
+
+		#Fight for independence
+		option = {
+			name = EVTOPTA32565
+
+			prestige = 5
+			release_vassal = YUC
+			leave_alliance = MEX
+			MEX = { country_event = 32566 }
+			ai_chance = { factor = 90 }
+		}
+
+		#accept the ultimatum
+		option = {
+			name = EVTOPTB32565
+
+			MEX = { country_event = 32567}
+			ai_chance = { factor = 10 }
+		}
+	}
+
+	#Description: Mexico War Declaration
+	country_event = {
+		id = 32566
+		title = EVTNAME32566
+		desc = EVTDESC32566
+		picture = "antonio_lopez_de_santa_ana"
+
+		is_triggered_only = yes
+
+		#declare war on yucatan
+		option = {
+			name = EVTOPTA32566
+
+			prestige = -5
+			YUC = {
+				any_owned = {
+					limit = { is_core = YUC }
+					add_core = MEX
+				}
+			}
+			war = {
+				target = YUC
+				attacker_goal = {
+					casus_belli = conquest_triggered
+					}
+				defender_goal = {
+					casus_belli = status_quo
+				}
+			}
+		}
+	}
+
+	#Description: Mexico accepts Yucatan's peaceful annexation
+	country_event = {
+		id = 32567
+		title = EVTNAME32567
+		desc = EVTDESC32567
+		picture = "antonio_lopez_de_santa_ana"
+
+		is_triggered_only = yes
+
+		#accept yucatan annexation
+		option = {
+			name = EVTOPTA32567
+
+			prestige = 10
+			plurality = 15
+			YUC = {
+				any_owned = {
+					limit = { is_core = YUC }
+					add_core = MEX
+				}
+			}
+			inherit = YUC
+		}
+	}
+
 ## Minors ##
 
 	## Rebellions ##

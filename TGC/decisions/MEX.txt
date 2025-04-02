@@ -1315,6 +1315,41 @@ political_decisions = {
 		}
 	}
 
+	#Description: if centralist Mexico has Yucatan as a puppet, they can attempt to force its annexation at a cost for stab and infamy
+	annex_yucatan_by_force = {
+		picture = mex_central_america
+		potential = {
+			tag = MEX
+			has_country_modifier = yucatan_contradictions
+			NOT = {
+				has_country_flag = attempted_yucatan_annexation
+			}
+		}
+
+		allow = {
+			tag = MEX
+			has_country_modifier = yucatan_contradictions
+			plurality = 30
+			year = 1842
+			YUC = {
+				brigades_compare = 2
+			}
+
+		effect = {
+			MEX = {
+				country_event = 32564
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1
+				year = 1842
+			}
+		}	
+	}
+
 	#Description: Mexico can, if at war with the USA, gets the help of historical generals. #KIWI: This is shameless LARPing, no wonder Mexico does so well in every single game.
 	glory_in_battle_blood_in_the_field = { #madebyFinnBroandAndJPADUN
 		picture = mexican_soldiers
@@ -2052,7 +2087,7 @@ political_decisions = {
 		}
 	}
 
-
+	#Freedom of Religion decision
 	freedom_of_religion = {
 		picture = freedom_of_religion
 		potential = { 

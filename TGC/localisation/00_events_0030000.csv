@@ -314,7 +314,21 @@ EVTNAME32562;The negotiations succeed!;;;;;;;;;;;;;x
 EVTOPTA32562;We welcome our siblings back into the union with open arms!;;;;;;;;;;;;;x
 EVTDESC32563;While coming to an agreement with the rebels in Yucatan allowed us to avoid any undue bloodshed on the battlefield, the Chamber is Deputies has been attempting to breach the agreement we came to with the rebels for some time now. This tension has now begun to impact our nation’s stability.;;;;;;;;;;;;;x
 EVTNAME32563;Discontent with our policy in Yucatan.;;;;;;;;;;;;;x
-EVTOPTA32563;Can everyone stop fighting?!;;;;;;;;;;;;;x
+EVTOPTA32563;Can everyone just stop fighting?!?!;;;;;;;;;;;;;x
+EVTDESC32564;The chamber of deputies is considering nulling the treaty we signed with Yucatan, with the argument being that any autonomy they have is illegal and runs contrary to our constitution. While they are correct, the stability of the nation must also be considered, as any such action would further inflame tensions within the country.;;;;;;;;;;;;;x 
+EVTNAME32564;The End of the Yucatan Republic?;;;;;;;;;;;;;x
+EVTOPTA32564;The measure passes and the treaty is voided!;;;;;;;;;;;;;x
+EVTOPTB32564;This is a step too far, the stability of the nation must be priotized.;;;;;;;;;;;;;x
+ECTDESC32565;The worst has happened, the centralists in Mexico City are attempting to force us to follow their centralist constitution, going as far as to threaten military force if we don't comply! What will we do?;;;;;;;;;;;;;x
+EVTNAME32565;Mexico wants to annex us!;;;;;;;;;;;;;x
+EVTOPTA32565;We will fight!;;;;;;;;;;;;;x
+EVTOPTB32565;We have no choice but to give in to their demands..;;;;;;;;;;;;;x
+EVTDESC32566;The rebels in Yucatan have rejected our ultimatum, going so far as to call for a restoration of the old constitution. The only option left is to take the peninsula back by force!;;;;;;;;;;;;;x
+EVTNAME32566;War with Yucatan!;;;;;;;;;;;;;x
+EVTOPTA32566;Por la República Centralista!;;;;;;;;;;;;;x
+EVTDESC32567;Surprisingly, the rebels in Yucatan have accepted our demands and will rejoin the federation willingly. There is no need for bloodshed.;;;;;;;;;;;;;x
+EVTNAME32567;Centralism prevails in Yucatan;;;;;;;;;;;;;x
+EVTOPTA32567;This is a great day for our nation!;;;;;;;;;;;;;x
 EVTDESC33000;The theatrical troupe of the Duchy of Saxe-Meiningen has performed their repertory in Berlin to great acclaim. They will soon begin a series of tours to nations throughout Europe.;La troupe théâtrale du duché de Saxe-Meiningen, qui interprétait son répertoire à Berlin, a été acclamée. Elle entreprendra bientôt plusieurs tournées en Europe.;Die Theatertruppe der Grafschaft Sachsen-Meiningen hat ihr Repertoir in Berlin mit großem Erfolg aufgeführt. Schon bald wird sie durch mehrere europäischen Nationen touren.;;;;;;;;;;;x
 EVTNAME33000;Meininger Troupe Opens in Berlin;La troupe de Saxe-Meiningen à Berlin;Meininger Theatertruppe tritt in Berlin auf;;;;;;;;;;;x
 EVTOPTA33000;Amazing!;Etonnant !;Erstaunlich!;;;;;;;;;;;x
