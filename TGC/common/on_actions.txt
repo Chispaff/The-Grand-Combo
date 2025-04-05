@@ -8,6 +8,7 @@ on_quarterly_pulse = {
 on_battle_won = {
 	100 = 44840 #Santa Anna Captured for Texas
 	100 = 32557 #Yucatan truce with Mexico
+	100 = 32568 #Yucatan second truce with Mexico
 }
 
 on_battle_lost = {

@@ -1227,7 +1227,7 @@
 		}
 	}
 
-	#Description: Yucatan invasion 1/?, failed first time 
+	#Description: Yucatan invasion 1/3, failed first time 
 	country_event = {
 		id = 32557
 		title = EVTNAME32557
@@ -1241,6 +1241,7 @@
 			tag = YUC
 			war_with = MEX
 			MEX = { has_country_flag = presidential_dictatorship_gov } 
+			NOT = { has_country_flag = yucatan_second_war } 
 			NOT = { year = 1850 } #Prevent it from showing up way too late
 		}
 
@@ -1266,7 +1267,7 @@
 		}
 	}
 
-	#Description: Yucatan Invasion 2/? Mexico gets to choose
+	#Description: Yucatan Invasion 2/3 Mexico gets to choose
 	country_event = {
 		id = 32558
 		title = EVTNAME32558
@@ -1302,7 +1303,7 @@
 		}
 	}
 
-	#Description: Yucatan Invasion 3/? ceasefire
+	#Description: Yucatan Invasion 3/3 ceasefire
 	country_event = {
 		id = 32559
 		title = EVTNAME32559
@@ -1337,7 +1338,11 @@
 		trigger = {
 			tag = MEX
 			is_vassal = no
-			has_country_flag = treaty_of_1841
+			OR = {
+				has_country_flag = treaty_of_1841
+				has_country_flag = treaty_of_1843
+			}
+
 			NOT = { has_country_modifier = yucatan_contradictions }
 		}
 
@@ -1404,6 +1409,7 @@
 			release_vassal = YUC
 			leave_alliance = MEX
 			MEX = { country_event = 32566 }
+			add_country_flag = yucatan_second_war
 			ai_chance = { factor = 90 }
 		}
 
@@ -1470,6 +1476,142 @@
 				}
 			}
 			inherit = YUC
+		}
+	}
+
+	#Description: Yucatan invasion 1/5, second failed attempt 
+	country_event = {
+		id = 32568
+		title = EVTNAME32568
+		desc = EVTDESC32568
+		picture = "surrender_of_santanna"
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		trigger = {
+			tag = YUC
+			war_with = MEX
+			has_country_flag = yucatan_second_war
+			NOT = { year = 1850 } #Prevent it from showing up way too late
+		}
+
+
+		# Have peace
+		option = {
+			name = EVTOPTA32568
+
+			MEX = { country_event = 32569 }
+
+			ai_chance = { factor = 100 }
+		}
+
+		# Continue the war
+		option = {
+			name = EVTOPTB32568
+
+			prestige = 5
+			war_exhaustion = 10
+			MEX = {
+				war_exhaustion = 5
+			}
+
+			ai_chance = { factor = 0 }
+		}
+	}
+
+	#Description: Yucatan Invasion 2/5 Mexico gets to choose
+	country_event = {
+		id = 32569
+		title = EVTNAME32569
+		desc = EVTDESC32569
+		picture = "surrender_of_santanna"
+		major = yes
+
+		is_triggered_only = yes
+
+		# propose a new agreement
+		option = {
+			name = EVTOPTA32569
+
+			prestige = -10
+			plurality = -5
+			YUC = { country_event = 32570 }
+			ai_chance = { factor = 100 }
+		}
+
+		# Continue the war
+		option = {
+			name = EVTOPTB32569
+
+			war_exhaustion = 40
+			badboy = 5
+			prestige = -20
+			plurality = -10
+			ai_chance = { factor = 0 }
+		}
+	}
+
+	#Description: Second Yucatan Invasion 3/5, Yucatan gains prestige and accepts the deal or rejects
+	country_event = {
+		id = 32570
+		title = EVTNAME32570
+		desc = EVTDESC32570
+		picture = "treaty_of_velasco"
+
+		is_triggered_only = yes
+
+		#Yucatan accepts
+		option = {
+			name = EVTOPTA32570
+
+			any_country = {
+				limit = {
+					alliance_with = MEX
+					war_with = YUC
+				}
+				end_war = YUC
+			}
+			prestige = 10
+			plurality = 5
+			MEX = { country_event = 32571 }
+			ai_chance = { factor = 100 }
+		}
+	}
+
+	#Description: Second Yucatan Invasion 4/4, Yucatan accepts
+	country_event = {
+		id = 32571
+		title = EVTNAME32571
+		desc = EVTDESC32571
+		picture = "antonio_lopez_de_santa_ana"
+
+		is_triggered_only = yes
+		
+		#Yucatan accepts
+		option = {
+			name = EVTOPTA32571
+
+			prestige = 5
+			end_war = YUC
+			add_country_flag = {
+				name = treaty_of_1843
+			}
+			YUC = {
+				any_owned = {
+					limit = { is_core = MEX }
+					remove_core = MEX
+				}
+			}
+			add_country_modifier = {
+				name = yucatan_contradictions
+				duration = 365
+			}
+			create_vassal = YUC
+			any_owned = {
+				limit = { is_core = YUC }
+				secede_province = YUC
+			}
 		}
 	}
 

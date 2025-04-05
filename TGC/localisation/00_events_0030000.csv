@@ -329,6 +329,20 @@ EVTOPTA32566;Por la República Centralista!;;;;;;;;;;;;;x
 EVTDESC32567;Surprisingly, the rebels in Yucatan have accepted our demands and will rejoin the federation willingly. There is no need for bloodshed.;;;;;;;;;;;;;x
 EVTNAME32567;Centralism prevails in Yucatan;;;;;;;;;;;;;x
 EVTOPTA32567;This is a great day for our nation!;;;;;;;;;;;;;x
+EVTDESC32568;Despite their best attempts, the armies of the central government have been beaten in the field and are now retreating from the peninsula. The general of the invading army has shown himself to be amenable to signing a new treaty, hopefully to be accepted by the central government. Shall we come up with a new treaty?;;;;;;;;;;;;;x
+EVTNAME32568;The invasion repelled!;;;;;;;;;;;;;x
+EVTOPTA32568;We shall sign the treaty, there is no reason to continue the war.;;;;;;;;;;;;;x
+EVTOPTB32568;No! They have reneged on one treaty, they will inevitably renege on another.;;;;;;;;;;;;;x
+EVTDESC32569;The rebels in yucatan and our esteeemed general have come to an agreement after our failed invasion. This treaty will grant Yucatan much the same priveleges and freedoms they had before and will set reintegration back for some time. Not signing the treaty, however, brings the risk of even more unrest and instability at home.. what do we do?;;;;;;;;;;;;;x
+EVTNAME32569;The rebel offer;;;;;;;;;;;;;x
+EVTOPTA32569;We have no other choice, we will sign the treaty.;;;;;;;;;;;;;x
+EVTOPTB32569;This treaty is nothing but empty words on a paper. We will continue the war!;;;;;;;;;;;;;x
+EVTDESC32570;The centralist president has accepted the treaty and the war can now end. The constitution is 1824 still lives!;;;;;;;;;;;;;x
+EVTNAME32570;The treaty has been accepted!;;;;;;;;;;;;;x
+EVTOPTA32570;Another victory for the republic!;;;;;;;;;;;;;x
+EVTDESC32571;Now that the war has finally ended, the government in Yucatan has returned to our control. The chamber of deputies is understandably infuriated by this turn of events, but there is nothing they can do about it for now.;;;;;;;;;;;;;x
+EVTNAME32571;Finalization of the Treaty.;;;;;;;;;;;;;x
+EVTOPTA32571;Peace has returned to Mexico.;;;;;;;;;;;;;x
 EVTDESC33000;The theatrical troupe of the Duchy of Saxe-Meiningen has performed their repertory in Berlin to great acclaim. They will soon begin a series of tours to nations throughout Europe.;La troupe théâtrale du duché de Saxe-Meiningen, qui interprétait son répertoire à Berlin, a été acclamée. Elle entreprendra bientôt plusieurs tournées en Europe.;Die Theatertruppe der Grafschaft Sachsen-Meiningen hat ihr Repertoir in Berlin mit großem Erfolg aufgeführt. Schon bald wird sie durch mehrere europäischen Nationen touren.;;;;;;;;;;;x
 EVTNAME33000;Meininger Troupe Opens in Berlin;La troupe de Saxe-Meiningen à Berlin;Meininger Theatertruppe tritt in Berlin auf;;;;;;;;;;;x
 EVTOPTA33000;Amazing!;Etonnant !;Erstaunlich!;;;;;;;;;;;x
