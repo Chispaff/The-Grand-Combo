@@ -154,19 +154,19 @@
 
     clergymen = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 110
     }
 
     artisans = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 883
     }
 
     farmers = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 8280
     }
 
@@ -354,19 +354,19 @@
 
     clergymen = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 183
     }
 
     artisans = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 1008
     }
 
     farmers = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 18995
     }
 
@@ -1099,19 +1099,19 @@
 
     clergymen = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 183
     }
 
     artisans = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 1008
     }
 
     farmers = {
         culture = assyrian
-        religion = catholic
+        religion = nestorian
         size = 9818
     }
 

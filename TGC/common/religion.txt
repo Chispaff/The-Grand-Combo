@@ -32,6 +32,11 @@ christian = {
 		icon = 20
 		color = { 0 0.5 0.5 }
 	}
+
+	nestorian = {
+		icon = 21
+		color = { 0.8  0.8  0.9}
+	}
 }
 
 muslim = {
